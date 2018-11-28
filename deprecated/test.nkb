@@ -1,0 +1,97 @@
+/*resultado that should be tested*/
+    resultado(cold) :- cold, !.
+    resultado(flu) :- flu, !.
+    resultado(typhoid) :- typhoid, !.
+    resultado(measles) :- measles, !.
+    resultado(malaria) :- malaria, !.
+    resultado(unknown). /* no diagnosis*/
+    
+    /*resultado Identification Rules*/
+    
+    cold :-
+    verificar(headache),
+    verificar(runny_nose),
+    verificar(sneezing),
+    verificar(sore_throat),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Tylenol/tab'),
+    nl,
+    write('2: panadol/tab'),
+    nl,
+    write('3: Nasal spray'),
+    nl,
+    write('Please weare warm cloths Because'),
+    nl.
+    
+    flu :-
+    verificar(fever),
+    verificar(headache),
+    verificar(chills),
+    verificar(body_ache),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Tamiflu/tab'),
+    nl,
+    write('2: panadol/tab'),
+    nl,
+    write('3: Zanamivir/tab'),
+    nl,
+    write('Please take a warm bath and do salt gargling Because'),
+    nl.
+    
+    typhoid :-
+    verificar(headache),
+    verificar(abdominal_pain),
+    verificar(poor_appetite),
+    verificar(fever),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Chloramphenicol/tab'),
+    nl,
+    write('2: Amoxicillin/tab'),
+    nl,
+    write('3: Ciprofloxacin/tab'),
+    nl,
+    write('4: Azithromycin/tab'),
+    nl,
+    write('Please do complete bed rest and take soft Diet Because'),
+    nl.
+    
+    measles :-
+    verificar(fever),
+    verificar(runny_nose),
+    verificar(rash),
+    verificar(conjunctivitis),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Tylenol/tab'),
+    nl,
+    write('2: Aleve/tab'),
+    nl,
+    write('3: Advil/tab'),
+    nl,
+    write('4: Vitamin A'),
+    nl,
+    write('Please Get rest and use more liquid Because'),
+    nl.
+    
+    malaria :-
+    verificar(fever),
+    verificar(sweating),
+    verificar(headache),
+    verificar(nausea),
+    verificar(vomiting),
+    verificar(diarrhea),
+    write('Advices and Sugestions:'),
+    nl,
+    write('1: Aralen/tab'),
+    nl,
+    write('2: Qualaquin/tab'),
+    nl,
+    write('3: Plaquenil/tab'),
+    nl,
+    write('4: Mefloquine'),
+    nl,
+    write('Please do not sleep in open air and cover your full skin Because'),
+    nl.

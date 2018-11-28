@@ -1,0 +1,128 @@
+%%% Base de conocimiento: felinos. %%%
+
+resultado(leon):-
+    leon,
+    !.
+
+resultado(tigre):-
+    tigre,
+    !.
+
+resultado(leopardo):-
+    leopardo,
+    !.
+
+resultado(leopardo_de_las_nieves):-
+    leopardo_de_las_nieves,
+    !.
+
+resultado(jaguar):-
+    jaguar,
+    !.
+
+resultado(lince_canadiense):-
+    lince_canadiense,
+    !.
+
+resultado(ocelote):-
+    ocelote,
+    !.
+
+resultado(puma):-
+    puma,
+    !.
+
+resultado(lince_iberico):-
+    lince_iberico,
+    !.
+
+resultado(desconocido):-
+    writeln('La base de conocimiento no tiene suficiente informacion para inferir lo que busca.'),
+    !.
+
+leon:-
+    verificar(ruge),
+    verificar(tamano_grande),
+    verificar(color_amarillo),
+    verificar(melena),
+    verificar(africa),
+    writeln('Leon'),
+    writeln('Viven en poblaciones cada vez mas dispersas y fragmentadas del Africa subsahariana.'),
+    writeln('Tiempo de vida: 8-14 anios.').
+
+tigre:-
+    verificar(ruge),
+    verificar(tamano_grande),
+    verificar(color_amarillo),
+    verificar(pelaje_rayas),
+    verificar(asia),
+    writeln('Tigre'),
+    writeln('Se encuentra solamente en el continente asiatico; es un predador carnivoro y es la especie de felido mas grande del mundo junto con el leon.'),
+    writeln('Tiempo de vida: 16-18 anios.').
+
+leopardo:-
+    verificar(ruge),
+    verificar(tamano_grande),
+    verificar(color_amarillo),
+    verificar(pelaje_manchas),
+    verificar(africa),
+    writeln('Leopardo'),
+    writeln('Habita en todo tipo de habitats en Africa, siempre que tenga un lugar donde esconderse y existan suficientes presas para sobrevivir.'),
+    writeln('Tiempo de vida: 21-23 anios.').
+
+leopardo_de_las_nieves:-
+    verificar(ruge),
+    verificar(tamano_grande),
+    verificar(color_gris),
+    verificar(estacion_invierno),
+    writeln('Leopardo de las nieves'),
+    writeln('Es un predador muy fuerte, capaz de cazar animales que triplican su tamaño en el duro invierno.'),
+    writeln('Tiempo de vida: 15-21 anios.').
+
+jaguar:-
+    verificar(ruge),
+    verificar(tamano_grande),
+    verificar(color_amarillo),
+    verificar(pelaje_manchas),
+    verificar(america),
+    writeln('Jaguar'),
+    writeln('Se asemeja mucho en apariencia fisica al leopardo, pero generalmente es de mayor tamaño, cuenta con una constitucion mas robusta y su comportamiento y habitat son mas acordes a los del tigre.'),
+    writeln('Tiempo de vida: 21-23 anios.').
+
+lince_canadiense:-
+    verificar(gato_pequeno),
+    verificar(color_gris),
+    verificar(orejas_puntiagudas),
+    verificar(estacion_invierno),
+    verificar(america),
+    writeln('Lince canadiense'),
+    writeln('Alcanza los 90 cm de alto, solo superado en tamano por algunas subespecies de lince boreal.'),
+    writeln('Tiempo de vida: 14-26 anios.').
+
+ocelote:-
+    verificar(gato_pequeno),
+    verificar(color_amarillo),
+    verificar(pelaje_manchas),
+    verificar(america),
+    writeln('Ocelote'),
+    writeln('En Mesoamerica, es el tercer felino mas grande despues del jaguar y del puma.'),
+    writeln('Tiempo de vida: 10-13 anios.').
+
+puma:-
+    verificar(gato_pequeno),
+    verificar(color_amarillo),
+    verificar(pelaje_liso),
+    verificar(america),
+    writeln('Puma'),
+    writeln('Vive en mas lugares que cualquier otro mamifero salvaje terrestre del continente, ya que se extiende desde el Yukon, en Canada, hasta el sur de la cordillera de los Andes.'),
+    writeln('Tiempo de vida: 8-13 anios.').
+
+lince_iberico:-
+    verificar(gato_pequeno),
+    verificar(color_amarillo),
+    verificar(pelaje_manchas),
+    verificar(orejas_puntiagudas),
+    verificar(europa),
+    writeln('Lince iberico'),
+    writeln('Es un agil cazador. Se aproxima sigilosamente a la presa y salta sobre ella con rapidez. Menos frecuentemente espera oculto a que pase una presa.'),
+    writeln('Tiempo de vida: 8-13 anios.').

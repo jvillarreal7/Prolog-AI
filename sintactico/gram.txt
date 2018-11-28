@@ -1,0 +1,23 @@
+%%% Gramática de ejemplo %%%
+
+gramatica(1,g,[corchetea,declara,asignacion,corchetec]).
+gramatica(2,declara,[tipo,variables,declara]).
+gramatica(3,declara,[nulo]).
+gramatica(4,tipo,[entero]).
+gramatica(5,tipo,[real]).
+gramatica(6,variables,[id,lista]).
+gramatica(7,lista,[coma,variables]).
+gramatica(8,lista,[puntoycoma]).
+gramatica(9,asignacion,[id,igual,exp,puntoycoma,asignacion]).
+gramatica(10,exp,[term,expp]).
+gramatica(11,expp,[+,term,expp]).
+gramatica(12,exp,[nulo]).
+gramatica(13,term,[factor,termp]).
+gramatica(14,termp,[*,factor,termp]).
+gramatica(15,termp,[nulo]).
+gramatica(16,factor,[parentesisa,exp,parentesisc]).
+gramatica(17,factor,[id]).
+gramatica(18,asignacion,[nulo]).
+
+nt([g,declara,tipo,variables,lista,asignacion,exp,expp,term,termp,factor]).
+t([corchetea,corchetec,nulo,entero,real,id,coma,puntoycoma,igual,+,*]).

@@ -302,6 +302,115 @@ urticaria :-
     sintoma(ronchas, grandes),
     sintoma(picazon, intensa),
     writeln('El paciente tiene urticaria').
+    
+cancer_de_piel:- sintoma(aparicion,lunares),
+                 sintoma(cambios,lunares,existentes),
+                 sintoma(llagas,no,cicatrizan),
+                 sintoma(propagacion,pigmentos,manchas),
+                 sintoma(inflamacion,piel),
+                 sintoma(sensibiliadad,piel),
+                 sintoma(dolor,piel),
+                 write('El paciente tiene Cáncer de piel').
+
+cancer_de_piel:- sintoma(aparicion,lunares),
+                 sintoma(cambios,lunares,existentes),
+                 sintoma(llagas,no,cicatrizan),
+                 sintoma(propagacion,pigmentos,manchas),
+                 sintoma(enrojecimiento,piel),
+                 sintoma(sensibiliadad,piel),
+                 sintoma(dolor,piel),
+                 write('El paciente tiene Cáncer de piel').
+
+cancer_de_pulmon:- sintoma(tos,cronica),
+                   sintoma(tos,sangre),
+                   sintoma(dolor,pecho),
+                   sintoma(ronquera),
+                   sintoma(perdida,apetito),
+                   sintoma(dificultad,respirar),
+                   sintoma(cansancio),
+                   sintoma(infecciones,recurrentes),
+                   sintoma(aparicion,sibilancias),
+                   write('El paciente tiene Cáncer de pulmón').
+
+cancer_de_pulmon:- sintoma(tos,cronica),
+                   sintoma(tos,sangre),
+                   sintoma(dolor,pecho),
+                   sintoma(ronquera),
+                   sintoma(perdida,peso),
+                   sintoma(dificultad,respirar),
+                   sintoma(cansancio),
+                   sintoma(infecciones,recurrentes),
+                   sintoma(aparicion,sibilancias),
+                   write('El paciente tiene Cáncer de pulmón').
+
+leucemia:- sintoma(perdida,peso),
+           sintoma(fiebre),
+           sintoma(sudor,nocturno),
+           sintoma(cansancio),
+           sintoma(perdida,apetito),
+           sintoma(debilidad),
+           sintoma(mareos),
+           sintoma(aparicion,moretones),
+           sintoma(sangrado,encias),
+           writeln('El paciente tiene Leucemia').
+
+leucemia:- sintoma(perdida,peso),
+           sintoma(fiebre),
+           sintoma(sudor,nocturno),
+           sintoma(cansancio),
+           sintoma(perdida,apetito),
+           sintoma(debilidad),
+           sintoma(mareos),
+           sintoma(aparicion,moretones),
+           sintoma(sangrado,nariz),
+           writeln('El paciente tiene Leucemia').
+
+melanoma:- sintoma(aparicion,lunares),
+           sintoma(inflamacion,piel),
+           sintoma(irritacion,piel),
+           sintoma(lunar,borde,dentado),
+           sintoma(lunar,azulado),
+           writeln('el paciente tiene Melanoma').
+
+melanoma:- sintoma(aparicion,lunares),
+           sintoma(inflamacion,piel),
+           sintoma(irritacion,piel),
+           sintoma(lunar,asimetrico),
+           sintoma(lunar,borde,dentado),
+           sintoma(lunar,rojizo),
+           writeln('el paciente tiene Melanoma').
+
+osteosarcoma:- sintoma(hinchazon,cerca,hueso),
+               sintoma(dolor,oseo),
+               sintoma(fractura,hueso),
+               writeln('El paciente tiene Osteosarcoma').
+
+osteosarcoma:- sintoma(hinchazon,cerca,hueso),
+               sintoma(dolor,articular),
+               sintoma(lesion,hueso),
+               writeln('El paciente tiene Osteosarcoma').
+
+tumores_cerebrales:- sintoma(dolor,cabeza),
+                     sintoma(vomito),
+                     sintoma(problemas,vista),
+                     sintoma(perdida,movimiento),
+                     sintoma(dificultad,mantener,equilibrio),
+                     sintoma(dificultad,hablar),
+                     sintoma(confusion),
+                     sintoma(cambios,personalidad),
+                     sintoma(convulsiones),
+                     sintoma(problemas,audicion),
+                     writeln('El paciente tiene Tumor Cerebral').
+
+tumores_cerebrales:- sintoma(dolor,cabeza),
+                     sintoma(nauseas),
+                     sintoma(problemas,vista),
+                     sintoma(perdida,sensibilidad),
+                     sintoma(dificultad,mantener,equilibrio),
+                     sintoma(dificultad,hablar),
+                     sintoma(confusion),
+                     sintoma(convulsiones),
+                     writeln('El paciente tiene Tumor Cerebral').
 
 
 diagnostico:- acidez_estomacal.
@@ -379,6 +488,18 @@ diagnostico:- eccema.
 diagnostico:- hirsutismo.
 
 diagnostico:- urticaria.
+
+diagnostico:- cancer_de_piel.
+
+diagnostico:- cancer_de_pulmon.
+
+diagnostico:- leucemia.
+
+diagnostico:- melanoma.
+
+diagnostico:- osteosarcoma.
+
+diagnostico:- tumores_cerebrales.
 
 diagnostico:- writeln('Falta de información').
 
